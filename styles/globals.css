@@ -1,16 +1,112 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+/* @font-face {
+    font-family: 'libre-baskerville';
+    src: url('../public/font/libre-baskerville/LibreBaskerville-Regular.ttf')
+        format('ttf');
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+    font-family: 'libre-baskerville';
+    src: url('../public/font/libre-baskerville/LibreBaskerville-Bold.ttf')
+        format('ttf');
+    font-weight: bold;
+} */
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.font-robo {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-pacifico {
+    font-family: 'Pacifico', cursive;
+}
+
+.editor {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.ql-toolbar.ql-snow {
+    border: none;
+}
+
+.ql-container.ql-snow {
+    border: none;
+    height: 100vh;
+}
+
+.btn-primary {
+    background-color: #26ffdf;
+    color: black;
+    border-color: #26ffdf;
+}
+
+.btn-primary-link {
+    color: #0074da;
+    background-color: transparent;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+    color: #ffffff !important;
+    background-color: #1f2838 !important;
+    border-color: #494f57 !important;
+}
+
+.btn-primary-link:hover,
+.btn-primary-link:active,
+.btn-primary-link:focus {
+    color: #26ffdf !important;
+    background-color: #1f2838 !important;
+    border-color: #1f2838 !important;
+}
+
+.img-link {
+    color: black;
+    background-color: transparent;
+}
+
+.img-link:hover,
+.img-link:active,
+.img-link:focus {
+    color: #26ffdf !important;
+    background-color: #1f2838 !important;
+    border-color: #1f2838 !important;
+}
+
+.date {
+    color: rgb(150, 150, 150);
+}
+
+.my-dropdown-toggle::after {
+    content: none;
+}
+
+#nprogress .bar {
+    background: #00ebc8;
+    height: 5px;
+}
+
+#nprogress .spinner-icon {
+    border-top-color: #00ebc8;
+    border-left-color: #00ebc8;
+}
+
+img {
+    object-fit: cover;
 }
