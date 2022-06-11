@@ -18,7 +18,7 @@ export default function Header() {
 						{/* <Link href="/blogs">
                           <a className="nav-item nav-link active mr-2">Blogs</a>
                         </Link> */}
-						<div className=''>
+						<div className='text-center'>
 							<Link href='/works'>
 								<a className='nav-link active mx-4'>Works</a>
 							</Link>

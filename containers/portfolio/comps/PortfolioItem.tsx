@@ -10,6 +10,7 @@ interface PropTypes {
 		title: string;
 		image: string;
 		description: string;
+		link: string;
 	};
 }
 
@@ -33,14 +34,16 @@ const PortfolioItem: React.FC<PropTypes> = ({ data }) => {
 						alt=''
 					/>
 				</div>
-				<div className='font-robo text-center mt-4 fs-4'>
-					{data.title}
+				<div className='font-robo text-center mt-3'>
+					<div className='fs-4 '>{data.title}</div>
+					<div className='fs-6 fw-normal'>{data.description}</div>
 				</div>
 			</div>
 			<CardModal
 				title={data.title}
 				image={data.image}
 				description={data.description}
+				link={data.link}
 				show={open}
 				onHide={() => setOpen(false)}
 			/>

@@ -5,12 +5,15 @@ const portfolioItems = [
 	{
 		title: "DuckBoyz",
 		image: "/images/duckboyz.png",
-		description: "blob",
+		description:
+			"DUCK BOYZ is a collection of 10,000 randomly generated NFTs living on the Ethereum blockchain.",
+		link: "https://duckboyz.com/",
 	},
 	{
-		title: "test 2",
-		image: "/images/linkedin.png",
+		title: "Ladydis",
+		image: "/images/ladydis.png",
 		description: "mlob",
+		link: "/",
 	},
 ];
 

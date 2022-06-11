@@ -7,17 +7,12 @@ export interface Props {
 	title: string;
 	image: string;
 	description: string;
+	link: string;
 	onHide: any;
 	show: any;
 }
 
-export default function CardShow({
-	title,
-	image,
-	description,
-	onHide,
-	show,
-}: Props) {
+export default function CardShow({ title, image, description, link, onHide, show }: Props) {
 	return (
 		<Modal
 			show={show}
@@ -37,19 +32,18 @@ export default function CardShow({
 				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
-				<Image
-					src={image}
-					layout='responsive'
-					width='400'
-					height='200'
-					alt=''
-				/>
-				<p>{description}</p>
-				<p>
-					Cras mattis consectetur purus sit amet fermentum. Cras justo
-					odio, dapibus ac facilisis in, egestas eget quam. Morbi leo
-					risus, porta ac consectetur ac, vestibulum at eros.
-				</p>
+				<a href={link} target='_blank' rel='noreferrer'>
+					<Image
+						src={image}
+						layout='responsive'
+						width='400'
+						height='200'
+						alt=''
+					/>
+				</a>
+				<div className='d-grid gap-3 mt-4'>
+					<p>{description}</p>
+				</div>
 			</Modal.Body>
 			<Modal.Footer>
 				<button className={`btn ${Style.primary}`} onClick={onHide}>
