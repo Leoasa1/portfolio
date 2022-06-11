@@ -10,7 +10,7 @@ export default function footer() {
         <footer>
             <div className="container mt-5">
                 <div className="d-flex justify-content-center mb-2">
-                    <div className="row text-center col col-md-2">
+                    <div className="d-flex text-center col col-md-2">
                         <a
                             href="https://github.com/Leoasa1"
                             className="row justify-content-center col"

@@ -13,7 +13,7 @@
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 970px;
+        max-width: 800px !important;
     }
 }
 
@@ -47,6 +47,10 @@ a:focus {
 .ql-container.ql-snow {
     border: none;
     height: 100vh;
+}
+
+.b-primary {
+    background-color: #26ffdf;
 }
 
 .btn-primary {
@@ -110,3 +114,6 @@ a:focus {
 img {
     object-fit: cover;
 }
+
+//////////////////
+
