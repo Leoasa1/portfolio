@@ -4,6 +4,7 @@ import styles from "../styles/contact.module.scss";
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
 import Link from 'next/link';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Contract: React.FC = () => {
 	const [toSend, setToSend] = useState({
@@ -39,6 +40,10 @@ const Contract: React.FC = () => {
 		setToSend({ ...toSend, [e.target.name]: e.target.value });
 	};
 
+	const onChange = (value) => {
+		console.log('Captcha value:', value);
+	};
+
 	return (
 		<Layout>
 			<div className={`${styles.contactBg} align-middle font-robo`}>
@@ -52,7 +57,7 @@ const Contract: React.FC = () => {
 						</div>
 					) : (
 						<div className='row justify-content-center'>
-							<div className='col-10 col-sm-7'>
+							<div className='col-10 col-sm-7 g-recaptcha'>
 								<Form
 									onSubmit={onSubmit}
 									onChange={handleChange}
@@ -103,6 +108,10 @@ const Contract: React.FC = () => {
 											onChange={handleChange}
 										/>
 									</Form.Group>
+									<ReCAPTCHA
+										sitekey={process.env.CAPTCHA_KEY || ''}
+										onChange={onChange}
+									/>
 									<div className='d-flex justify-content-center mt-4'>
 										<Button
 											type='submit'
