@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import { Modal, Button } from "react-bootstrap";
-import Style from "./card.module.scss";
+import React from 'react';
+import Image from 'next/image';
+import { Modal } from 'react-bootstrap';
+import Style from './card.module.scss';
 
-export interface Props {
+export interface PropTypes {
 	title: string;
 	image: string;
 	description: string;
@@ -12,7 +12,14 @@ export interface Props {
 	show: any;
 }
 
-export default function CardShow({ title, image, description, link, onHide, show }: Props) {
+const CardShow: React.FC<PropTypes> = ({
+	title,
+	image,
+	description,
+	link,
+	onHide,
+	show,
+}) => {
 	return (
 		<Modal
 			show={show}
@@ -46,10 +53,18 @@ export default function CardShow({ title, image, description, link, onHide, show
 				</div>
 			</Modal.Body>
 			<Modal.Footer>
-				<button className={`btn ${Style.primary}`} onClick={onHide}>
+				<button
+					className={`btn ${Style.bgPrimary} text-white px-4 mx-3`}
+					onClick={onHide}
+				>
 					Close
 				</button>
+				<a className={`btn ${Style.primary} px-4`} href={link}>
+					Visit
+				</a>
 			</Modal.Footer>
 		</Modal>
 	);
-}
+};
+
+export default CardShow;

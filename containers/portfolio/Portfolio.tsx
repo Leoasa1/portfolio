@@ -3,17 +3,11 @@ import { PortfolioItem } from "./comps";
 
 const portfolioItems = [
 	{
-		title: "DuckBoyz",
-		image: "/images/duckboyz.png",
+		title: 'DuckBoyz',
+		image: '/images/duckboyz.png',
 		description:
-			"DUCK BOYZ is a collection of 10,000 randomly generated NFTs living on the Ethereum blockchain.",
-		link: "https://duckboyz.com/",
-	},
-	{
-		title: "Ladydis",
-		image: "/images/ladydis.png",
-		description: "mlob",
-		link: "/",
+			'DUCK BOYZ is a collection of 10,000 randomly generated NFTs living on the Ethereum blockchain. The first generation is created from over 140 traits and over 800 million total possible variations. Each Duck Boy is comprised of a unique body, headwear, outfit, beak, eyes, skin color, hair color and background color.',
+		link: 'https://duckboyz.com/',
 	},
 ];
 

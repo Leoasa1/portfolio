@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from "next";
 import Image from "next/image";
@@ -19,10 +18,10 @@ const Home: NextPage = () => {
 	return (
 		<Layout>
 			<div className='maintext align-middle square mt-1'>
-				<div className='p-2 text-center'>
+				<div className='text-center'>
 					<div className='d-flex justify-content-center col-auto align-self-center'>
 						<object
-							className='mb-5 computer-logo col-md-6 col-7'
+							className='mb-5 computer-logo col-6 col-md-6'
 							type='image/svg+xml'
 							data='/images/RetroPC-3.svg'
 						/>
@@ -73,7 +72,7 @@ const Home: NextPage = () => {
 			</div>
 
 			{/*Bio paragraph and social links*/}
-			<div className='container px-5'>
+			<div className='container px-4'>
 				<div id='bio' className='d-flex align-items-center my-5'>
 					<div
 						style={{
@@ -92,6 +91,7 @@ const Home: NextPage = () => {
 							layout='intrinsic'
 							width='120'
 							height='120'
+							alt=''
 						/>
 					</div>
 					<div className='profileName'>
@@ -135,8 +135,10 @@ const Home: NextPage = () => {
 					</h3>
 					<div className='row'>
 						<a
-							className='btn btn-primary-link col-6 col-md-3 border-0'
+							className='btn btn-primary-link col-7 col-md-3 border-0'
 							href='https://www.instagram.com/leo_asadourian/'
+							target='_blank'
+							rel='noreferrer'
 						>
 							<div className='row text-start'>
 								<div className='col-2'>
@@ -153,8 +155,10 @@ const Home: NextPage = () => {
 					</div>
 					<div className='row'>
 						<a
-							className='btn btn-primary-link col-6 col-md-3 border-0'
+							className='btn btn-primary-link col-7 col-md-3 border-0'
 							href='https://github.com/Leoasa1'
+							target='_blank'
+							rel='noreferrer'
 						>
 							<div className='row text-start'>
 								<div className='col-2'>
@@ -169,8 +173,10 @@ const Home: NextPage = () => {
 					</div>
 					<div className='row'>
 						<a
-							className='btn btn-primary-link col-6 col-md-3 border-0'
+							className='btn btn-primary-link col-7 col-md-3 border-0'
 							href='https://500px.com/p/leoasa84'
+							target='_blank'
+							rel='noreferrer'
 						>
 							<div className='row text-start'>
 								<div className='col-2'>
@@ -184,6 +190,8 @@ const Home: NextPage = () => {
 						<a
 							className='col-12 col-md-6 text-center img-link p-4'
 							href='https://youtube.com/channel/UCLo3wIEshlIzCkQW7lK6ROA'
+							target='_blank'
+							rel='noreferrer'
 						>
 							<div className='socialImg'>
 								<Image
@@ -192,6 +200,7 @@ const Home: NextPage = () => {
 									layout='responsive'
 									width='450'
 									height='250'
+									alt=''
 								/>
 							</div>
 							<h5 className='mt-2 '>Aerial Cinematography</h5>
@@ -200,6 +209,8 @@ const Home: NextPage = () => {
 						<a
 							className='col-12 col-md-6 text-center img-link p-4'
 							href='https://www.linkedin.com/in/leo-asadourian-667a63178/'
+							target='_blank'
+							rel='noreferrer'
 						>
 							<div className='socialImg'>
 								<Image
@@ -208,6 +219,7 @@ const Home: NextPage = () => {
 									layout='responsive'
 									width='450'
 									height='250'
+									alt=''
 								/>
 							</div>
 							<h5 className='mt-2'>Linkedin</h5>

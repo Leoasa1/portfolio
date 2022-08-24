@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import { Card } from "react-bootstrap";
-import CardModal from "@/components/card/Card";
-import classnames from "classnames";
-import Style from "./item.module.scss";
-import Image from "next/image";
+import React, { useState } from 'react';
+import CardModal from '@/components/card/Card';
+import classnames from 'classnames';
+import Style from './item.module.scss';
+import Image from 'next/image';
 
 interface PropTypes {
 	data: {
@@ -16,6 +15,10 @@ interface PropTypes {
 
 const PortfolioItem: React.FC<PropTypes> = ({ data }) => {
 	const [open, setOpen] = useState(false);
+	let desc = data.description;
+	if (desc.length > 120) {
+		desc = desc.substring(0, 120) + '...';
+	}
 
 	return (
 		<>
@@ -24,7 +27,7 @@ const PortfolioItem: React.FC<PropTypes> = ({ data }) => {
 				onClick={() => setOpen(true)}
 			>
 				<div
-					className={classnames("overflow-hidden", Style.worksImage)}
+					className={classnames('overflow-hidden', Style.worksImage)}
 				>
 					<Image
 						src={data.image}
@@ -35,8 +38,7 @@ const PortfolioItem: React.FC<PropTypes> = ({ data }) => {
 					/>
 				</div>
 				<div className='font-robo text-center mt-3'>
-					<div className='fs-4 '>{data.title}</div>
-					<div className='fs-6 fw-normal'>{data.description}</div>
+					<div className='fs-4 fw-bold '>{data.title}</div>
 				</div>
 			</div>
 			<CardModal

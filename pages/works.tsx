@@ -2,9 +2,8 @@ import React from "react";
 import Style from "../styles/works.module.scss";
 import Layout from "@/components/layout/Layout";
 import { Portfolio } from "@/containers/portfolio";
-import classnames from "classnames";
 
-const Works = () => {
+const Works: React.FC = () => {
 	return (
 		<Layout>
 			<div className='b-primary py-1'></div>
