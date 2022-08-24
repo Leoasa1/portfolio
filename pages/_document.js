@@ -8,7 +8,6 @@ class MyDocument extends Document {
 
   render() {
     return (
-<<<<<<< HEAD
 		<Html>
 			<Head>
 				<link rel='preconnect' href='https://fonts.googleapis.com' />
@@ -29,28 +28,6 @@ class MyDocument extends Document {
 			</body>
 		</Html>
 	);
-=======
-      <Html>
-        <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-            rel="stylesheet"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
-            rel="stylesheet"
-          />
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
-          <div id="modal-root"></div>
-        </body>
-      </Html>
-    );
->>>>>>> cbe7ed670e8ce97839a3de59900127bfa5f26ae5
   }
 }
 

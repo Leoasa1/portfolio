@@ -40,7 +40,7 @@ const Contract: React.FC = () => {
 		setToSend({ ...toSend, [e.target.name]: e.target.value });
 	};
 
-	const onChange = (value) => {
+	const onChange = (value: any) => {
 		console.log('Captcha value:', value);
 	};
 
