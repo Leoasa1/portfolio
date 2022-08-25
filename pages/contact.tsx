@@ -36,7 +36,6 @@ const Contract: React.FC = () => {
 	};
 
 	const handleChange = (e: any) => {
-		console.log(toSend);
 		setToSend({ ...toSend, [e.target.name]: e.target.value });
 	};
 
@@ -108,13 +107,17 @@ const Contract: React.FC = () => {
 											onChange={handleChange}
 										/>
 									</Form.Group>
-									{process.env.CAPTCHA_KEY ? (
-										<ReCAPTCHA
-											sitekey={
-												process.env.CAPTCHA_KEY || ''
-											}
-											onChange={onChange}
-										/>
+									{process.env.NEXT_PUBLIC_SITE_KEY ? (
+										<Form.Group className='mb-3'>
+											<ReCAPTCHA
+												sitekey={
+													process.env
+														.NEXT_PUBLIC_SITE_KEY ||
+													''
+												}
+												onChange={onChange}
+											/>
+										</Form.Group>
 									) : (
 										<></>
 									)}
