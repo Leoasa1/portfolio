@@ -108,10 +108,17 @@ const Contract: React.FC = () => {
 											onChange={handleChange}
 										/>
 									</Form.Group>
-									<ReCAPTCHA
-										sitekey={process.env.CAPTCHA_KEY || ''}
-										onChange={onChange}
-									/>
+									{process.env.CAPTCHA_KEY ? (
+										<ReCAPTCHA
+											sitekey={
+												process.env.CAPTCHA_KEY || ''
+											}
+											onChange={onChange}
+										/>
+									) : (
+										<></>
+									)}
+
 									<div className='d-flex justify-content-center mt-4'>
 										<Button
 											type='submit'
