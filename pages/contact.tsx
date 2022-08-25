@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import { useState } from 'react';
 import Link from 'next/link';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Contract: React.FC = () => {
 	const [toSend, setToSend] = useState({
@@ -14,22 +15,29 @@ const Contract: React.FC = () => {
 		reply_to: '',
 	});
 	const [formSent, setFormSent] = useState(false);
+	const [captchaRef, setCaptchaRef] = useState();
 
 	const onSubmit = (e: any) => {
 		e.preventDefault();
+		const params = {
+			...toSend,
+			'g-recaptcha-response': captchaRef,
+		};
 		emailjs
 			.send(
 				'service_ieib0vm',
 				'template_xhmud9t',
-				toSend,
+				params,
 				'R5hmxWcfF4YSZa03H'
 			)
 			.then(
 				function (response) {
 					console.log('SUCCESS!', response.status, response.text);
+					toast.success('Message Sent');
 					setFormSent(true);
 				},
 				function (error) {
+					toast.error(`Server Error ${error.text}`);
 					console.log('FAILED...', error);
 				}
 			);
@@ -40,13 +48,14 @@ const Contract: React.FC = () => {
 	};
 
 	const onChange = (value: any) => {
-		console.log('Captcha value:', value);
+		setCaptchaRef(value);
 	};
 
 	return (
 		<Layout>
 			<div className={`${styles.contactBg} align-middle font-robo`}>
 				<Container>
+					<ToastContainer />
 					{formSent ? (
 						<div className='text-center'>
 							<h1 className=''>Thank you for Contacting!</h1>
@@ -72,6 +81,7 @@ const Contract: React.FC = () => {
 										<Form.Control
 											required
 											type='text'
+											id='name'
 											placeholder='John Doe'
 											name='from_name'
 											value={toSend.from_name}
@@ -86,6 +96,7 @@ const Contract: React.FC = () => {
 										<Form.Control
 											required
 											type='email'
+											id='email'
 											placeholder='name@example.com'
 											name='reply_to'
 											value={toSend.reply_to}
